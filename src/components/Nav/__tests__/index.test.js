@@ -4,6 +4,12 @@ import '@testing-library/jest-dom/extend-expect';
 import Nav from '..';
 const { getByTestId } = render(<Nav />);
 
+const categories = [
+  { name: 'portraits', description: 'Portraits of people in my life' }
+]
+const mockCurrentCategory = jest.fn();
+const mockSetCurrentCategory = jest.fn();
+
 afterEach(cleanup);
 
 describe('Nav component', () => {
